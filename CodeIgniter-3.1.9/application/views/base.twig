@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>{% block title %}{% endblock %}｜マイページ</title>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    {% block css %}{% endblock %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+{% block header %}{% endblock %}
+
+{% block modal %}{% endblock %}
+
+{% block main %}{% endblock %}
+
+{% block footer %}{% endblock %}
+
+<script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% if alert %}
+<script>
+	swal( {{ alert|raw }} );
+</script>
+{% endif %}
+{% block js %}{% endblock %}
+</body>
+</html>
