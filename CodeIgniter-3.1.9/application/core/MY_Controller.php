@@ -5,7 +5,7 @@ class MY_Controller extends CI_Controller {
     public function __construct(){
         parent::__construct();
         
-        $loader = new Twig_Loader_Filesystem('./application/views');
+        $loader = new Twig_Loader_Filesystem('../application/views');
         // $this->twig = new Twig_Environment($loader, array('cache' => APPPATH.'/cache/twig', 'debug' => true));
         $this->twig = new Twig_Environment($loader);
 
