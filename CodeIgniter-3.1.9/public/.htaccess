@@ -1,9 +1,9 @@
 RewriteEngine On
 
 # 強制HTTP->HTTPS
-RewriteCond %{ENV:HTTPS} !^on$
-RewriteCond %{HTTP:} ^$
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# RewriteCond %{ENV:HTTPS} !^on$
+# RewriteCond %{HTTP:} ^$
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # Codeigniter index.php除去
 RewriteCond %{REQUEST_FILENAME} !-f
